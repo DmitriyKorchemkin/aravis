@@ -724,6 +724,20 @@ ArvGstCapsInfos arv_gst_caps_infos[] = {
 		"video/x-raw-bayer, format=(string)bggr, bpp=(int)8, depth=(int)8",
 		"video/x-raw-bayer",	8,	8,	ARV_MAKE_FOURCC ('b','g','g','r')
 	},
+	{
+		ARV_PIXEL_FORMAT_BAYER_GR_16,
+		"video/x-raw, format=(string)GRAY16_LE",
+		"video/x-raw",		"GRAY16_LE",
+		"video/x-raw-gray, bpp=(int)16, depth=(int)16",
+		"video/x-raw-gray",	16,	16,	0
+	},
+	{
+		ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED,
+		"video/x-raw, format=(string)GRAY16_LE",
+		"video/x-raw",		"GRAY16_LE",
+		"video/x-raw-gray, bpp=(int)12, depth=(int)12",
+		"video/x-raw-gray",	12,	12,	0
+	},
 
 /* Non 8bit bayer formats are not supported by gstreamer bayer plugin.
  * This feature is discussed in bug https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad/-/issues/86 .*/
